@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery.ui.touch-punch.min.js"></script>
+
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+
+<!-- CSS -->
+<style type="text/css">
+    .square {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border: 1px solid black;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        text-align: center;
+        float: left;
+        background-color: lightblue;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .squaredotted {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border: 1px dotted gray;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        text-align: center;
+        float: left;
+        color: gray;
+        background-color: lightgray;
+    }
+
+    .ss {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border: 1px dotted gray;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        text-align: center;
+        float: left;
+        color: white;
+        background-color: red;
+    }
+</style>
+
+
+<!-- Javascript -->
+<script>
+    $(function () {
+        $(".square").draggable({
+            snap: ".squaredotted",
+            snapMode: "inner"
+        });
+    });
+</script>
+
+<body class="vh-100">
+
+    <div class="container">
+        <div class="row">
+            <div class="">1</div>
+            <div class="">1</div>
+            <div class="">1</div>
+        </div>
+        <div class="row">
+            <div class="">2</div>
+            <div class="">2</div>
+            <div class="">2</div>
+        </div>
+    </div>
+    <div class="h-100"></div>
+    <div class="area m-4 p-4 border overflow-hidden">
+        <!-- HTML -->
+        <div style="float:left">
+            <div class="square">1</div>
+            <div class="square">2</div>
+            <div class="square">3</div>
+            <div style="clear:both"></div>
+            <div class="square">4</div>
+            <div class="square">5</div>
+            <div class="square">6</div>
+            <div style="clear:both"></div>
+            <div class="square">7</div>
+            <div class="square">8</div>
+            <div class="square">9</div>
+        </div>
+        <div style="float:left;margin-left:50px;">
+            <div class="ss">1</div>
+            <div class="ss">2</div>
+            <div class="ss">3</div>
+            <div style="clear:both"></div>
+            <div class="squaredotted">4</div>
+            <div class="squaredotted">5</div>
+            <div class="squaredotted">6</div>
+            <div style="clear:both"></div>
+            <div class="squaredotted">7</div>
+            <div class="squaredotted">8</div>
+            <div class="squaredotted">9</div>
+        </div>
+    </div>
+
+
+</body>
